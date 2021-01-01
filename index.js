@@ -1,53 +1,53 @@
-function mapToNegativize(src) {
+function mapToNegativize(e) {
   let x = []
-  for (let i = 0; i < src.length; i++ ) {
-    x.push(-1 * src[i])
+  for (let i = 0; i < e.length; i++ ) {
+    x.push(-1 * e[i])
   }
   return x
 }
 
-function mapToNoChange(src) {
-  let r = []
-  for (let i = 0; i < src.length; i++ ) {
-    r.push(src[i])
+function mapToNoChange(e) {
+  let x = []
+  for (let i = 0; i < e.length; i++ ) {
+    x.push(e[i])
   }
-  return r
+  return x
 }
 
-function mapToDouble(src) {
-  let r = []
-  for (let i = 0; i < src.length; i++ ) {
-    r.push(2 * src[i])
+function mapToDouble(e) {
+  let x = []
+  for (let i = 0; i < e.length; i++ ) {
+    x.push(2 * e[i])
   }
-  return r
+  return x
 }
 
-function mapToSquare(src) {
-  let r = []
-  for (let i = 0; i < src.length; i++ ) {
-    r.push(src[i] * src[i])
+function mapToSquare(e) {
+  let x = []
+  for (let i = 0; i < e.length; i++ ) {
+    x.push(e[i] * e[i])
   }
-  return r
+  return x
 }
 
-function reduceToTotal(src, startingPoint=0) {
+function reduceToTotal(e, startingPoint=0) {
   let total = startingPoint
-  for (let i = 0; i < src.length; i++ ) {
-    total = total + src[i]
+  for (let i = 0; i < e.length; i++ ) {
+    total = total + e[i]
   }
   return total
 }
 
-function reduceToAllTrue(src) {
-  for (let i = 0; i < src.length; i++ ) {
-    if (!src[i]) return false
+function reduceToAllTrue(e) {
+  for (let i = 0; i < e.length; i++ ) {
+    if (!e[i]) return false
   }
   return true
 }
 
-function reduceToAnyTrue(src) {
-  for (let i = 0; i < src.length; i++ ) {
-    if (src[i]) return true
+function reduceToAnyTrue(e) {
+  for (let i = 0; i < e.length; i++ ) {
+    if (e[i]) return true
   }
   return false
 }
