@@ -1,9 +1,9 @@
 function mapToNegativize(src) {
-  let r = []
+  let x = []
   for (let i = 0; i < src.length; i++ ) {
-    r.push(-1 * src[i])
+    x.push(-1 * src[i])
   }
-  return r
+  return x
 }
 
 function mapToNoChange(src) {
